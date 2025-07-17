@@ -1,13 +1,13 @@
 # Data Observability on Elastic and Kibana
 
-This project provides (the first iteration of) data observability dashboards
-built on Elastic and Kibana to monitor, explore, and ensure the quality of our
-data pipelines.
+This repo provides information about our data observability dashboards that
+monitor, explore, and ensure the quality of our data pipelines built on Elastic
+and Kibana.
 
 ## Overview
 
-Our observability solution consists of three key dashboards designed to provide
-complete visibility into your data infrastructure:
+Our observability solution consists of three dashboards designed to provide
+visibility into our infra:
 
 | Dashboard                                                                                                                                                                                                                                 | Documentation Link                                                                   | Purpose                                      | Description                                                                                                    |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
@@ -22,13 +22,15 @@ complete visibility into your data infrastructure:
 
 ### 1. ⚠️ Pipeline Health Dashboard
 
-Monitor the operational status of your data pipelines in real-time. This
-dashboard answers the critical question: "Is the pipeline running ok?"
+Monitor the operational status of your data pipelines in real-time.
+
+This dashboard answers the critical question: "Is the pipeline running ok?"
 
 ### 2. 🎯 Data QA Dashboard (Coming Soon)
 
-Ensure data quality by validating the output of your pipelines. This dashboard
-will help answer: "Is the data produced by the pipeline ok?"
+Ensure data quality by validating the output of your pipelines.
+
+This dashboard will help answer: "Is the data produced by the pipeline ok?"
 
 ### 3. 📊 Data Exploration Dashboard
 
@@ -42,46 +44,16 @@ For detailed data exploration and custom queries, use
 [Kibana Discover](https://bilby.kb.asia-southeast1.gcp.elastic-cloud.com/s/official-china/app/discover#/)
 to directly search and analyze your data.
 
-#### Example Queries
-
-- **Procurement Line Documents**: `news_line:procurement_line`
-  - Retrieves all documents that belong to our procurement line
-
-- **Official Line with Keyword Search**: `newspaper:official_line AND "药品"`
-  - Finds documents in the official line that contain the keyword "药品"
-    (pharmaceuticals)
-
-- **Time-based Filtering**: Add time constraints using the time picker in the
-  top right corner
-
-- **Field-specific Searches**: Click on any field in the left sidebar to view
-  specific values
-
-#### Query Syntax Tips
-
-- Use quotes for exact phrase matching: `"exact phrase"`
-- Use AND/OR for boolean logic: `field1:value1 AND field2:value2`
-- Use wildcards for pattern matching: `field:value*`
-- Use field existence queries: `field:*` (or `NOT field:*` to exclude)
-
-## Getting Started
-
-Each dashboard comes with its own detailed documentation:
-
-- [Pipeline Health Dashboard](./dashboards/pipeline-health/README.md)
-- Data QA Dashboard - Documentation coming soon
-- [Data Exploration Dashboard](./dashboards/data-exploration/README.md)
-
 ## Architecture
 
 We've decided to go with Elasticsearch and Kibana for the observability stack.
 This allows us to create visualizations with our date pretty easily, and data
-analysts and even non-technical users can build visualizations painlessly
-without needing to think about data pipeline and infrastructure.
+analysts and non-technical users can build visualizations on their own without
+needing to think about data pipeline and infrastructure.
 
 ## Contributing
 
 Please refer to individual dashboard documentation for specific implementation
-details and contribution guidelines.
+details, as shown above.
 
 If you'd like to build your own dashboard, please feel free! Tell us about it!
