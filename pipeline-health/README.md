@@ -67,6 +67,8 @@ pipeline health:
 
 To see which documents need to be translated, we use the following formula:
 
+<!-- for underscore in math mode, we need to escape the \_ like \\_ for it to render properly -->
+
 $$
 \text{field}\ \wedge\ \lnot\text{field\\_en}
 $$
