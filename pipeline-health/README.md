@@ -164,16 +164,16 @@ sector, policy stage).
 
 ### Low Translation Rate
 
-- Check the "Missing translations by news line" treemap
-- Industry Association content often has the highest volume of untranslated
-  documents
-- Review translation service capacity and error logs
+- Check the "Translation Rate by news line" metric collection.
+- official line content often has the highest volume and thus also the highest
+  rate of untranslated documents.
+- Review translation service (Baidu) capacity and error logs.
 
 ### Stale Scrapers
 
 - Monitor the "Scraper Triggers" metric
-- Check individual scraper status in Level 2
-- Review scraper logs for authentication or parsing errors
+- Check individual scraper status in Level 2 (Not yet available)
+- Review scraper logs for authentication or parsing errors (Not yet available)
 
 ### ML Inference Gaps
 
@@ -183,7 +183,7 @@ sector, policy stage).
 
 ## Dashboard Access
 
-Access the live dashboard:
+Access the dashboard:
 [Pipeline Health Dashboard](<https://bilby.kb.asia-southeast1.gcp.elastic-cloud.com/s/official-china/app/dashboards#/view/7770cea6-8100-4b25-ac13-be8f265624ad?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-2w,to:now))>)
 
 ## Related Resources
