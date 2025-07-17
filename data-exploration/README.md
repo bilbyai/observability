@@ -1,5 +1,7 @@
 # Data Exploration Dashboard
 
+[Go to Dashboard](<https://bilby.kb.asia-southeast1.gcp.elastic-cloud.com/s/official-china/app/dashboards#/view/8288744a-964d-46c0-af9e-749ddea5ff51?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-4w,to:now))>)
+
 ![screenshot](https://github.com/bilbyai/observability/blob/main/data-exploration/screenshots/SCR-20250717-mnms.png?raw=true)
 
 ## Overview

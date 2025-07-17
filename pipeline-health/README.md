@@ -1,5 +1,7 @@
 # Pipeline Health Dashboard
 
+[Go to Dashboard](<https://bilby.kb.asia-southeast1.gcp.elastic-cloud.com/s/official-china/app/dashboards#/view/7770cea6-8100-4b25-ac13-be8f265624ad?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-2w,to:now))>)
+
 ![screenshot top](https://github.com/bilbyai/observability/blob/main/pipeline-health/screenshots/SCR-20250717-krke.png?raw=true)
 ![screenshot bottom](https://github.com/bilbyai/observability/blob/main/pipeline-health/screenshots/SCR-20250717-nlpf.png?raw=true)
 

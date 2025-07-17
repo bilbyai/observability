@@ -1,5 +1,7 @@
 # Kibana Discover User Guide
 
+[Go to Kibana Discover](https://bilby.kb.asia-southeast1.gcp.elastic-cloud.com/s/official-china/app/discover#/)
+
 ## Overview
 
 Kibana Discover is a powerful data exploration tool that allows you to search,
