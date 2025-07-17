@@ -21,8 +21,8 @@ navigate and use Discover effectively for data analysis and troubleshooting.
     - [Via the visual editor](#via-the-visual-editor)
     - [Kibana Query Language (KQL)](#kibana-query-language-kql)
       - [Basic Syntax](#basic-syntax)
+      - [Common Fields](#common-fields)
       - [Examples](#examples)
-      - [Fields](#fields)
   - [Saving and Sharing](#saving-and-sharing)
     - [Save Searches](#save-searches)
     - [Export Data](#export-data)
@@ -100,6 +100,32 @@ field:value
 > 🚨 Warning: Certain documents' body field exceed the 1 million character
 > length, and will fail to search.
 
+#### Common Fields
+
+- `date`: The date the document claims to be published on.
+- `title`: The title of the document in its original language.
+- `title_en`: The title of the document in English.
+- `body`: The body of the document in its original language.
+- `body_en`: The body of the document in English.
+- `summary`: The summary of the document in its original language.
+- `translated_summary`: The summary of the document body in English. This is
+  named so to clarify that we are translating the summary (and not summarizing
+  the translation).
+- `subhead`: The subhead of the document in its original language. Only
+  official_line has this at the moment.
+- `subhead_en`: The subhead of the document in English.
+- `news_line.keyword`: The news line of the document.
+- `marketSentimentPrediction.keyword`: The sentiment prediction of the document.
+  It actually has nothing to do with the market at this point, just treat it as
+  a normal sentiment.
+- `policyLifecyclePrediction`: The policy stage prediction of the document,
+  ranging from 2 to 6.
+- `inserted_at`: The timestamp the document was inserted into our pipeline.
+
+If you are curious about what are the acceptable values for these fields, you
+can either click on the field in the sidebar to see a distribution, or get it
+autocompleted in the search bar.
+
 #### Examples
 
 - Find all documents in the official line: `news_line.keyword:"official_line"`
@@ -113,8 +139,6 @@ You can do cool stuff like this! Finding documents that have a policy stage >= 5
 and negative sentiment, and getting the distribution of news_line.
 
 ![image](https://github.com/bilbyai/observability/blob/main/kibana-discover/screenshots/SCR-20250717-mwjz.png?raw=true)
-
-#### Fields
 
 <!--
 
