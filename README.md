@@ -9,33 +9,34 @@ data pipelines.
 Our observability solution consists of three key dashboards designed to provide
 complete visibility into your data infrastructure:
 
-| Dashboard                                                                                                                                                                                                                                 | Documentation                                                                        | Purpose                                                             | Description                                                                                                    |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| [Pipeline Health](<https://bilby.kb.asia-southeast1.gcp.elastic-cloud.com/s/official-china/app/dashboards#/view/7770cea6-8100-4b25-ac13-be8f265624ad?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-2w,to:now))>)  | [Documentation](https://github.com/bilbyai/observability/tree/main/pipeline-health)  | Monitor the operational status of our data pipelines.               | This dashboard answers the critical question within 30 seconds: "Is the pipeline running ok?"                  |
-| Data QA                                                                                                                                                                                                                                   | (This dashboard is not yet implemented)                                              | Ensure data quality by validating the output of our pipelines.      | This dashboard will help answer: "Is the data produced by the pipeline ok?"                                    |
-| [Data Exploration](<https://bilby.kb.asia-southeast1.gcp.elastic-cloud.com/s/official-china/app/dashboards#/view/8288744a-964d-46c0-af9e-749ddea5ff51?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-4w,to:now))>) | [Documentation](https://github.com/bilbyai/observability/tree/main/data-exploration) | Explore and understand our data through interactive visualizations. | Get insights into data patterns, distributions, and characteristics to answer: "What does the data look like?" |
+| Dashboard                                                                                                                                                                                                                                 | Documentation Link                                                                   | Purpose                                      | Description                                                                                                    |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| [Pipeline Health](<https://bilby.kb.asia-southeast1.gcp.elastic-cloud.com/s/official-china/app/dashboards#/view/7770cea6-8100-4b25-ac13-be8f265624ad?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-2w,to:now))>)  | [Documentation](https://github.com/bilbyai/observability/tree/main/pipeline-health)  | Quickly see the status of our pipelines.     | This dashboard answers the critical question within 30 seconds: "Is the pipeline running ok?"                  |
+| Data QA                                                                                                                                                                                                                                   | (This dashboard is not yet implemented)                                              | Determine the quality of our data pipelines. | This dashboard will help answer: "Is the data produced by the pipeline ok?"                                    |
+| [Data Exploration](<https://bilby.kb.asia-southeast1.gcp.elastic-cloud.com/s/official-china/app/dashboards#/view/8288744a-964d-46c0-af9e-749ddea5ff51?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-4w,to:now))>) | [Documentation](https://github.com/bilbyai/observability/tree/main/data-exploration) | Explore and understand our data.             | Get insights into data patterns, distributions, and characteristics to answer: "What does the data look like?" |
+| [Kibana Discover](https://bilby.kb.asia-southeast1.gcp.elastic-cloud.com/s/official-china/app/discover#/)                                                                                                                                 | [Documentation](https://github.com/bilbyai/observability/tree/main/kibana-discover)  | For in-depth investigations                  | This is used to find specific data points via filters.                                                         |
 
-For in-depth investigations, please use
+🚨 For in-depth investigations, please use
 [Kibana Discover](https://bilby.kb.asia-southeast1.gcp.elastic-cloud.com/s/official-china/app/discover#/)
 to directly query the data.
 
-### 1. Pipeline Health Dashboard
+### 1. ⚠️ Pipeline Health Dashboard
 
 Monitor the operational status of your data pipelines in real-time. This
 dashboard answers the critical question: "Is the pipeline running ok?"
 
-### 2. Data QA Dashboard (Coming Soon)
+### 2. 🎯 Data QA Dashboard (Coming Soon)
 
 Ensure data quality by validating the output of your pipelines. This dashboard
 will help answer: "Is the data produced by the pipeline ok?"
 
-### 3. Data Exploration Dashboard
+### 3. 📊 Data Exploration Dashboard
 
 Explore and understand your data through interactive visualizations. Get
 insights into data patterns, distributions, and characteristics to answer: "What
 does the data look like?"
 
-### 4. Kibana Discover
+### 4. 🔍 Kibana Discover
 
 For detailed data exploration and custom queries, use
 [Kibana Discover](https://bilby.kb.asia-southeast1.gcp.elastic-cloud.com/s/official-china/app/discover#/)

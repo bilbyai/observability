@@ -23,16 +23,48 @@ pipeline health:
 
 #### Scraping Metrics
 
-- **Last Scraper Run**: Time since the last successful scraper execution
-- **Summary Generation Ratio**: Percentage of documents with generated summaries
-  (Target: 100%)
+- **Last Scraper Run**: Time since the last successful scraper execution. This
+  number may lag behind the actual time since the last scraper run, because the
+  BigQuery to Elastic sync only happens once a day. This is OK, because a 1 day
+  lag is considered acceptable.
 
 #### Text Operations Metrics
 
-- **Basic Sentiment Ratio**: Coverage of sentiment analysis (Target: 100%)
+- **Summary Generation Ratio**: Percentage of documents with generated summaries
+  (Target: 100%)
+- **Baidu Sentiment Ratio**: Coverage of sentiment analysis (Target: 100%)
 - **Translation Rate**: Percentage of documents successfully translated (Target:
   100%)
-- **ML Inference Rate**: Coverage of ML predictions (Target: 100%)
+
+To see which documents need to be translated, we use the following formula:
+
+$$
+\text{field}\ \wedge\ \lnot\text{field\_en}
+$$
+
+This is the same as:
+
+$$
+\text{field}\ AND\ NOT\ \text{field\_en}
+$$
+
+in KQL, this is: `field:* AND NOT field_en:*`
+
+In plain english, this means that the document has the field, but the English
+version of the field is not present.
+
+For example, if the document has a `title` field, but the English translation of
+that field, `title_en`, is not present, then the document is considered to be
+missing a translation.
+
+If the original language field is null, then there is nothing to be translated,
+so it is considered to be okay. However, this means that if the document is
+missing that field in the first place, that may be an issue with upstream
+scrapers.
+
+#### In-House ML Inference Metrics
+
+- **In-House ML Inference Rate**: Coverage of ML predictions (Target: 100%)
 
 ### Level 2: Component Performance (Middle Section)
 
@@ -42,18 +74,25 @@ Provides detailed breakdowns of each pipeline stage:
 
 - **Scraper Triggers**: Weekly trigger count and success rate
 - **Document Throughput**: Weekly document processing volume and rate
-- **Component Status**: Individual scraper and DAG health indicators
+- **Component Status**: Individual scraper and DAG health indicators (Data not
+  yet available)
 
 #### Text Operations Performance
 
-- **Industry Association**: Processing metrics for industry-specific content
-- **Sentiment Analysis**: Detailed sentiment processing statistics
-- **Sector Classification**: Sector assignment coverage
-- **Policy Stage**: Policy stage classification metrics
+The Level 2 metrics for text operations and translation are split by news line.
 
-### Level 3: Detailed Analytics (Bottom Section)
+#### In-House ML Inference Performance
 
-Granular visualizations for root cause analysis:
+The Level 2 metrics for in-house ML inference are split by model.
+
+We currently have 4 in-house ML models:
+
+- **Sentiment**
+- **Sector**
+- **Policy Stage**
+- **Importance**
+
+#### Granular visualizations for root cause analysis
 
 1. **Warehouse Documents by Time**
    - Bar chart with 7-day moving average
@@ -72,12 +111,17 @@ Granular visualizations for root cause analysis:
    - Treemap visualizations showing problematic sources
    - Industry Association and official_line breakdowns
 
-## Key Metrics Explained
+### Level 3: Detailed Analysis
+
+Detailed analysis are to be done in the
+[Kibana Discover page](https://bilby.kb.asia-southeast1.gcp.elastic-cloud.com/s/official-china/app/discover#/).
+
+## Key Definitions Explained
 
 ### Warehouse Document
 
-Documents stored in the `article_warehouse` table, representing successfully
-processed articles.
+Documents stored in the `article_warehouse` table, representing individual
+articles.
 
 ### Stale Scraper
 
@@ -88,6 +132,10 @@ collection issues.
 
 Percentage of documents with completed translations. Critical for multi-language
 content accessibility.
+
+The translation rate is calculated by seeing if the original content is there
+and if the translated content is also there. If the original content is there
+but the translated content is not, it is considered a missing translation.
 
 ### ML Inference Rate
 
