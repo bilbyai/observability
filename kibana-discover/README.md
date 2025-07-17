@@ -8,6 +8,9 @@ Kibana Discover is a powerful data exploration tool that allows you to search,
 filter, and analyze your data stored in Elasticsearch. This guide will help you
 navigate and use Discover effectively for data analysis and troubleshooting.
 
+**You can also consider this as a replacement for the BigQuery console, since it
+has the same data.**
+
 ## Table of Contents
 
 - [Kibana Discover User Guide](#kibana-discover-user-guide)
