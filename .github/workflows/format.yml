@@ -2,50 +2,50 @@ name: Format README Files
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [main]
     paths:
-      - '**/*.md'
+      - "**/*.md"
   pull_request:
     paths:
-      - '**/*.md'
+      - "**/*.md"
 
 jobs:
   format:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        
-    - name: Setup pnpm
-      uses: pnpm/action-setup@v2
-      with:
-        version: 8
-        
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-        cache: 'pnpm'
-        
-    - name: Install dependencies
-      run: pnpm install --frozen-lockfile
-      
-    - name: Format README files
-      run: pnpm run format:readme
-      
-    - name: Check for changes
-      id: verify-changed-files
-      run: |
-        git diff --name-only --exit-code || echo "changed=true" >> $GITHUB_OUTPUT
-        
-    - name: Commit changes
-      if: steps.verify-changed-files.outputs.changed == 'true'
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add -A
-        git commit -m "Auto-format README files with Prettier"
-        git push
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Format README files
+        run: pnpm run format:write
+
+      - name: Check for changes
+        id: verify-changed-files
+        run: |
+          git diff --name-only --exit-code || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit changes
+        if: steps.verify-changed-files.outputs.changed == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "Auto-format README files with Prettier"
+          git push
