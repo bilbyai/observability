@@ -12,8 +12,6 @@ The dashboard follows a hierarchical information architecture:
 - **Left to Right**: Following the pipeline's data flow stages
 - **Color Coding**: Red/orange for issues, green for healthy metrics
 
-
-
 ## Dashboard Structure
 
 ### Level 1: Critical Health Indicators (Top Section)
