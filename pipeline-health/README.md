@@ -1,5 +1,8 @@
 # Pipeline Health Dashboard
 
+![screenshot top](https://github.com/bilbyai/observability/blob/main/pipeline-health/screenshots/SCR-20250717-krke.png?raw=true)
+![screenshot bottom](https://github.com/bilbyai/observability/blob/main/pipeline-health/screenshots/SCR-20250717-nlpf.png?raw=true)
+
 ## Overview
 
 The Pipeline Health Dashboard provides operational monitoring of our data
