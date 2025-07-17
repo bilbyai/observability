@@ -68,16 +68,16 @@ pipeline health:
 To see which documents need to be translated, we use the following formula:
 
 $$
-\text{field}\ \wedge\ \lnot\text{field{\textunderscore}en}
+\text{field}\ \wedge\ \lnot\text{field\\_en}
 $$
 
 This is the same as:
 
 $$
-\text{field}\ AND\ NOT\ \text{field{\textunderscore}en}
+\text{field}\ AND\ NOT\ \texttt{field\\_en}
 $$
 
-in KQL, this is: `field:* AND NOT field_en:*`
+in KQL, this is: `field:* AND NOT field_en:*`.
 
 In plain english, we are looking for documents that have the field that needs to
 be translated, but does not have the English translation of that field.
