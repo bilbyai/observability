@@ -16,9 +16,9 @@ complete visibility into your data infrastructure:
 | [Data Exploration](<https://bilby.kb.asia-southeast1.gcp.elastic-cloud.com/s/official-china/app/dashboards#/view/8288744a-964d-46c0-af9e-749ddea5ff51?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-4w,to:now))>) | [Documentation](https://github.com/bilbyai/observability/tree/main/data-exploration) | Explore and understand our data.             | Get insights into data patterns, distributions, and characteristics to answer: "What does the data look like?" |
 | [Kibana Discover](https://bilby.kb.asia-southeast1.gcp.elastic-cloud.com/s/official-china/app/discover#/)                                                                                                                                 | [Documentation](https://github.com/bilbyai/observability/tree/main/kibana-discover)  | For in-depth investigations                  | This is used to find specific data points via filters.                                                         |
 
-🚨 For in-depth investigations, please use
-[Kibana Discover](https://bilby.kb.asia-southeast1.gcp.elastic-cloud.com/s/official-china/app/discover#/)
-to directly query the data.
+> 🚨 For in-depth investigations, please use
+> [Kibana Discover](https://bilby.kb.asia-southeast1.gcp.elastic-cloud.com/s/official-china/app/discover#/)
+> to directly query the data.
 
 ### 1. ⚠️ Pipeline Health Dashboard
 
