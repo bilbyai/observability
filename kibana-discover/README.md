@@ -178,7 +178,7 @@ For advanced analytical queries, use ES|QL:
    - Click on the "Export" tab.
    - Click on "Generate CSV".
      ![image](https://github.com/bilbyai/observability/blob/main/kibana-discover/screenshots/SCR-20250717-mqjz.png?raw=true)
-   - WHen it's ready, it's available to download immediately through the
+   - When it's ready, it's available to download immediately through the
      notification, or in "Stack Management > Reporting".
      ![image](https://github.com/bilbyai/observability/blob/main/kibana-discover/screenshots/SCR-20250717-mszn.png?raw=true)
 
