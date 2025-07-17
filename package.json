@@ -1,0 +1,13 @@
+{
+  "name": "data-observability",
+  "version": "1.0.0",
+  "description": "Data observability dashboards for Elastic and Kibana",
+  "scripts": {
+    "format:check": "prettier --check \"**/*.md\"",
+    "format:write": "prettier --write \"**/*.md\""
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  },
+  "packageManager": "pnpm@10.12.4"
+}

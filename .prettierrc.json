@@ -1,0 +1,16 @@
+{
+  "printWidth": 100,
+  "proseWrap": "always",
+  "singleQuote": false,
+  "trailingComma": "es5",
+  "semi": true,
+  "overrides": [
+    {
+      "files": "*.md",
+      "options": {
+        "proseWrap": "always",
+        "printWidth": 80
+      }
+    }
+  ]
+}
