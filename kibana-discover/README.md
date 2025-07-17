@@ -16,7 +16,6 @@ navigate and use Discover effectively for data analysis and troubleshooting.
     - [First Time Setup](#first-time-setup)
   - [Understanding the Interface](#understanding-the-interface)
     - [Main Components](#main-components)
-    - [Key Areas](#key-areas)
   - [Search and Query](#search-and-query)
     - [Via the visual editor](#via-the-visual-editor)
     - [Kibana Query Language (KQL)](#kibana-query-language-kql)
@@ -54,16 +53,13 @@ If this is your first time using Discover:
 
 ### Main Components
 
-![Kibana Discover Interface](https://github.com/bilbyai/observability/blob/main/kibana-discover/screenshots/SCR-20250717-mlzp.png?raw=true)
-
-### Key Areas
-
 1. **Data View Selector**: Choose which index pattern to explore
-2. **Time Range Picker**: Set the time window for your data
-3. **Search Bar**: Enter queries using KQL or Lucene syntax
-4. **Filters**: Add visual filters to refine results
-5. **Fields Sidebar**: Browse and select fields to display
-6. **Document Table**: View your search results
+2. **Search Bar**: Enter queries using KQL or Lucene syntax
+3. **Time Range Picker**: Set the time window for your data
+4. **Fields Sidebar**: Browse and select fields to display
+5. **Document Table**: View your search results
+
+![Kibana Discover Interface](https://github.com/bilbyai/observability/blob/main/kibana-discover/screenshots/SCR-20250717-mlzp.png?raw=true)
 
 ## Search and Query
 
@@ -181,7 +177,7 @@ For advanced analytical queries, use ES|QL:
    - Click on the "Export icon" on the top-right corner.
    - Click on the "Export" tab.
    - Click on "Generate CSV".
-     ![image](https://github.com/bilbyai/observability/blob/main/kibana-discover/screenshots/SCR-20250717-mzqz.png?raw=true)
+     ![image](https://github.com/bilbyai/observability/blob/main/kibana-discover/screenshots/SCR-20250717-mqjz.png?raw=true)
    - WHen it's ready, it's available to download immediately through the
      notification, or in "Stack Management > Reporting".
      ![image](https://github.com/bilbyai/observability/blob/main/kibana-discover/screenshots/SCR-20250717-mszn.png?raw=true)
