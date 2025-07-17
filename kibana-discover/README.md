@@ -32,9 +32,10 @@ navigate and use Discover effectively for data analysis and troubleshooting.
 
 ### Accessing Discover
 
-1. Navigate to Kibana in your browser
-2. Click on **Discover** in the left navigation menu
-3. Select your data view (index pattern) from the dropdown
+1. Navigate to
+   [Kibana](https://bilby.kb.asia-southeast1.gcp.elastic-cloud.com/s/official-china/app/discover#/)
+   in your browser
+2. Select your data view (index pattern) from the dropdown
 
 ![Accessing Discover](https://github.com/bilbyai/observability/blob/main/kibana-discover/screenshots/SCR-20250717-mfdg.png?raw=true)
 
