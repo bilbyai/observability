@@ -20,8 +20,9 @@ navigate and use Discover effectively for data analysis and troubleshooting.
     - [Via the visual editor](#via-the-visual-editor)
     - [Kibana Query Language (KQL)](#kibana-query-language-kql)
       - [Basic Syntax](#basic-syntax)
-      - [Common Fields](#common-fields)
       - [Examples](#examples)
+      - [Common Fields](#common-fields)
+      - [Encouragement](#encouragement)
   - [Saving and Sharing](#saving-and-sharing)
     - [Save Searches](#save-searches)
     - [Export Data](#export-data)
@@ -89,6 +90,15 @@ field:value
 "text_to_search"
 ```
 
+#### Examples
+
+- Find all documents in the official line: `news_line.keyword:"official_line"`
+- Find documents in the procurement line that mention drugs:
+  `news_line.keyword:"procurement" AND "药品"`
+- Documents with policy stage >= 5 and negative sentiment:
+  `policyLifecyclePrediction >= 5 AND marketSentimentPrediction.keyword:"negative" `
+- Documents with a bunch of keywords: `"药品" OR "医疗" OR "医药行业"`
+
 > 📒 Pro tip: Text fields sometimes have a `.keyword` suffix. This is a special
 > field that stores the value as a keyword (like a category, rather than free
 > text), which is useful for exact matches.
@@ -122,16 +132,9 @@ If you are curious about what are the acceptable values for these fields, you
 can either click on the field in the sidebar to see a distribution, or get it
 autocompleted in the search bar.
 
-#### Examples
+#### Encouragement
 
-- Find all documents in the official line: `news_line.keyword:"official_line"`
-- Find documents in the procurement line that mention drugs:
-  `news_line.keyword:"procurement" AND "药品"`
-- Documents with policy stage >= 5 and negative sentiment:
-  `policyLifecyclePrediction >= 5 AND marketSentimentPrediction.keyword:"negative" `
-- Documents with a bunch of keywords: ``
-
-You can do cool stuff like this! Finding documents that have a policy stage >= 5
+You can do cool stuff like this: Finding documents that have a policy stage >= 5
 and negative sentiment, and getting the distribution of news_line.
 
 ![image](https://github.com/bilbyai/observability/blob/main/kibana-discover/screenshots/SCR-20250717-mwjz.png?raw=true)
