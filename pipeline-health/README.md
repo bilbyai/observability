@@ -12,6 +12,8 @@ The dashboard follows a hierarchical information architecture:
 - **Left to Right**: Following the pipeline's data flow stages
 - **Color Coding**: Red/orange for issues, green for healthy metrics
 
+![pipeline structure](https://github.com/bilbyai/observability/blob/main/pipeline-health/screenshots/structure.png?raw=true)
+
 ## Dashboard Structure
 
 ### Level 1: Critical Health Indicators (Top Section)
