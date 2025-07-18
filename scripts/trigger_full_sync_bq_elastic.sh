@@ -1,4 +1,5 @@
 #!/bin/bash
+# Does a full sync of article_warehouse table in BigQuery to Elasticsearch.
 # This script should run in the root of the repo.
 
 # exit on error
@@ -28,3 +29,6 @@ batchSizeBytes=5242880,\
 trustSelfSignedCerts=false,\
 disableCertificateValidation=false,\
 apiKeySource=PLAINTEXT
+
+# batch size 50 is important because it does not crash the job.
+# We have been getting timeout errors on Elasticsearch with larger batch sizes.
