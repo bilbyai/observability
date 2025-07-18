@@ -15,7 +15,7 @@ gcloud dataflow flex-template \
   --region asia-southeast1 \
   --additional-user-labels "" \
   --parameters \
-query='SELECT * FROM `bilbyai-prod.newspapers_dbt_deploy.article_warehouse` WHERE inserted_at <= CURRENT_TIMESTAMP() AND inserted_at',\
+query='SELECT * FROM `bilbyai-prod.newspapers_dbt_deploy.article_warehouse` WHERE inserted_at <= CURRENT_TIMESTAMP()',\
 useLegacySql=false,\
 connectionUrl=$ELASTIC_CLOUD_ID,\
 apiKey=$ELASTIC_API_KEY,\
@@ -23,7 +23,7 @@ index=bilbyai-prod.newspapers_dbt_deploy.article_warehouse,\
 bulkInsertMethod=INDEX,\
 propertyAsId=uuid,\
 usePartialUpdate=false,\
-batchSize=100,\
+batchSize=50,\
 batchSizeBytes=5242880,\
 trustSelfSignedCerts=false,\
 disableCertificateValidation=false,\
